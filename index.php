@@ -170,9 +170,9 @@ if(!empty($_POST)){
         <div style="height: 150px;">
           <img src="<?php echo $_SESSION['monster']->img; ?>" style="width:120px; height:auto; margin:40px auto 0 auto; display:block;">
         </div>
-        <p style="font-size:14px; text-align:center;">モンスターのHP：<?php echo $_SESSION['hp']; ?></p>
+        <p style="font-size:14px; text-align:center;">モンスターのHP：<?php echo $_SESSION['monster']->hp; ?></p>
         <p>倒したモンスター数：<?php echo $_SESSION['knockDownCount']; ?></p>
-        <p>勇者の残りHP：<?php echo $_SESSION['monster']->hp; ?></p>
+        <p>勇者の残りHP：<?php echo $_SESSION['myhp']; ?></p>
         <form method="post">
           <input type="submit" name="attack" value="▶攻撃する">
           <input type="submit" name="escape" value="▶逃げる">
