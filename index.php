@@ -11,10 +11,10 @@ $monsters = array();
 
 class Monster{
     // プロパティ
-    public $name;
-    public $hp;
-    public $img;
-    public $attack = '';
+    private $name = '';
+    private $hp = '';
+    private $img = '';
+    private $attack = '';
 
     // コンストラクタ
     public function __construct($name,$hp,$img,$attack){
@@ -29,6 +29,30 @@ class Monster{
         $_SESSION['myhp'] -= $this->attack;
         $_SESSION['history'].= $this->attack.'ポイントのダメージを受けた!<br>';
     }
+    //セッター
+    public function setHp($num){
+        // セッターを使うことで、直接代入させずにバリデーションチェックを行ってから代入させることができる	$this->hp = filter_var($num,FILTER_VALIDATE_INT);
+        $this->hp = filter_var($num, FILTER_VALIDATE_INT); //filter_varは値に対して色々なパターンのバリデーションを行える便利関数	
+        }
+    public function setAttack($num){
+        $this->attack = (int)filter_var($num,FILTER_VALIDATE_FLOAT);
+    }
+    //ゲッター
+    public function getName(){
+        return $this->name;
+    }
+    public function getHp(){
+        return $this->hp;
+    }
+    public function getImg(){
+        if(empty($this->img)){
+            return 'img/no-img.png';
+        }
+        return $this->img;
+    }
+    public function getAttack(){
+        return $this->attack;
+    }
 }
 // インスタンス生成
 $monsters[] = new Monster('フランケン',100,'img/monster01.png',mt_rand(20,40));
@@ -42,8 +66,8 @@ $monsters[] = new Monster('血のハンド',180,'img/monster08.png',mt_rand(30,5
 
 function createMonster(){
     global $monsters;
-    $monster = $monsters[mt_rand(0,6)];
-    $_SESSION['history'].=$monster->name.'が現れた!<br>';
+    $monster = $monsters[mt_rand(0,7)];
+    $_SESSION['history'].=$monster->getName().'が現れた!<br>';
     $_SESSION['monster'] = $monster;
 }
 function init(){
@@ -63,7 +87,7 @@ if(!empty($_POST)){
     error_log('POSTされた!');
 
     if($startFlg){
-        $_SESSION['history'] .='ゲームスタート!<br>';
+        $_SESSION['history'] ='ゲームスタート!<br>';
         init();
     }else{
         // 攻撃するを押した場合
@@ -72,17 +96,21 @@ if(!empty($_POST)){
 
             // ランダムでモンスターに攻撃を与える
             $attackPoint = mt_rand(50,100);
-            $_SESSION['monster']->hp -=mt_rand(50,100);
+            $_SESSION['monster']->setHp($_SESSION['monster']->getHp() - $attackPoint );
             $_SESSION['history'].=$attackPoint.'ポイントのダメージを与えた!<br>';
             // モンスターから攻撃を受ける
+            if(!mt_rand(0,9) == $int){
+                $_SESSION['monster']->setAttack($_SESSION['monster']->getAttack()*1.5);
+                $_SESSION['history'] .= $_SESSION['monster']->getName().'のクリティカルヒット!!<br>';
+            }
             $_SESSION['monster']->attack();
               // 自分のhpが0以下になったらゲームオーバー	
             if($_SESSION['myhp'] <= 0){	
                 gameOver();	
             }else{
             // 自分のhpが0以下になったら、別のモンスターを出現させる
-            if($_SESSION['monster']->hp <=0){
-                $_SESSION['history'].=$_SESSION['monster']->name.'を倒した!<br>';
+            if($_SESSION['monster']->getHp() <=0){
+                $_SESSION['history'].=$_SESSION['monster']->GetName().'を倒した!<br>';
                 createMonster();
                 $_SESSION['knockDownCount'] = $_SESSION['knockDownCount']+1;
             }
@@ -166,11 +194,11 @@ if(!empty($_POST)){
           <input type="submit" name="start" value="▶ゲームスタート">
         </form>
       <?php }else{ ?>
-        <h2><?php echo $_SESSION['monster']->name.'が現れた!!'; ?></h2>
+        <h2><?php echo $_SESSION['monster']->getName().'が現れた!!'; ?></h2>
         <div style="height: 150px;">
-          <img src="<?php echo $_SESSION['monster']->img; ?>" style="width:120px; height:auto; margin:40px auto 0 auto; display:block;">
+          <img src="<?php echo $_SESSION['monster']->getImg(); ?>" style="width:120px; height:auto; margin:40px auto 0 auto; display:block;">
         </div>
-        <p style="font-size:14px; text-align:center;">モンスターのHP：<?php echo $_SESSION['monster']->hp; ?></p>
+        <p style="font-size:14px; text-align:center;">モンスターのHP：<?php echo $_SESSION['monster']->getHp(); ?></p>
         <p>倒したモンスター数：<?php echo $_SESSION['knockDownCount']; ?></p>
         <p>勇者の残りHP：<?php echo $_SESSION['myhp']; ?></p>
         <form method="post">
@@ -179,7 +207,7 @@ if(!empty($_POST)){
           <input type="submit" name="start" value="▶ゲームリスタート">
         </form>
       <?php } ?>
-      <div style="position:absolute; right:-300px; top:0; color:black; width: 250px;">
+      <div style="position:absolute; right:-350px; top:0; color:black; width: 300px;">
         <p><?php echo (!empty($_SESSION['history'])) ? $_SESSION['history'] : ''; ?></p>
       </div>
     </div>
