@@ -11,9 +11,9 @@ $monsters = array();
 
 class Monster{
     // プロパティ
-    private $name = '';
-    private $hp = '';
-    private $img = '';
+    private $name;
+    private $hp;
+    private $img;
     private $attack = '';
 
     // コンストラクタ

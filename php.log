@@ -213,3 +213,51 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 197
+[16-Jul-2020 07:53:19 Asia/Tokyo] PHP Notice:  Undefined index: monster in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 197
+[16-Jul-2020 07:53:19 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to a member function getName() on null in /Applications/MAMP/htdocs/PHP_Obj/index.php:197
+Stack trace:
+#0 {main}
+  thrown in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 197
+[16-Jul-2020 07:56:40 Asia/Tokyo] PHP Notice:  Undefined index: monster in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 197
+[16-Jul-2020 07:56:40 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to a member function getName() on null in /Applications/MAMP/htdocs/PHP_Obj/index.php:197
+Stack trace:
+#0 {main}
+  thrown in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 197
+[16-Jul-2020 07:57:45 Asia/Tokyo] PHP Notice:  Undefined index: monster in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 197
+[16-Jul-2020 07:57:45 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to a member function getName() on null in /Applications/MAMP/htdocs/PHP_Obj/index.php:197
+Stack trace:
+#0 {main}
+  thrown in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 197
+[16-Jul-2020 07:57:59 Asia/Tokyo] PHP Notice:  Undefined index: monster in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 197
+[16-Jul-2020 07:57:59 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to a member function getName() on null in /Applications/MAMP/htdocs/PHP_Obj/index.php:197
+Stack trace:
+#0 {main}
+  thrown in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 197
+[16-Jul-2020 07:58:20 Asia/Tokyo] PHP Notice:  Undefined index: monster in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 197
+[16-Jul-2020 07:58:20 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to a member function getName() on null in /Applications/MAMP/htdocs/PHP_Obj/index.php:197
+Stack trace:
+#0 {main}
+  thrown in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 197
+[16-Jul-2020 07:58:44 Asia/Tokyo] PHP Notice:  Undefined index: monster in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 197
+[16-Jul-2020 07:58:44 Asia/Tokyo] PHP Notice:  Trying to get property 'name' of non-object in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 197
+[16-Jul-2020 07:58:44 Asia/Tokyo] PHP Notice:  Undefined index: monster in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 199
+[16-Jul-2020 07:58:44 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to a member function getImg() on null in /Applications/MAMP/htdocs/PHP_Obj/index.php:199
+Stack trace:
+#0 {main}
+  thrown in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 199
+[16-Jul-2020 07:59:29 Asia/Tokyo] PHP Notice:  Undefined index: monster in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 197
+[16-Jul-2020 07:59:29 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to a member function getName() on null in /Applications/MAMP/htdocs/PHP_Obj/index.php:197
+Stack trace:
+#0 {main}
+  thrown in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 197
+[16-Jul-2020 07:59:50 Asia/Tokyo] PHP Notice:  Undefined index: monster in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 197
+[16-Jul-2020 07:59:50 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to a member function getName() on null in /Applications/MAMP/htdocs/PHP_Obj/index.php:197
+Stack trace:
+#0 {main}
+  thrown in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 197
+[16-Jul-2020 08:00:04 Asia/Tokyo] POSTされた!
+[16-Jul-2020 08:24:24 Asia/Tokyo] PHP Notice:  Undefined index: monster in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 197
+[16-Jul-2020 08:24:24 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to a member function getName() on null in /Applications/MAMP/htdocs/PHP_Obj/index.php:197
+Stack trace:
+#0 {main}
+  thrown in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 197
