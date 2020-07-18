@@ -11,10 +11,10 @@ $monsters = array();
 
 class Monster{
     // プロパティ
-    private $name;
-    private $hp;
-    private $img;
-    private $attack = '';
+    protected $name;
+    protected $hp;
+    protected $img;
+    protected $attack = '';
 
     // コンストラクタ
     public function __construct($name,$hp,$img,$attack){
@@ -26,8 +26,15 @@ class Monster{
 
     // メソッド
     public function attack(){
+        $attackPoint = $this->attack;
+        if(!mt_rand(0,10)){
+            $attackPoint *= 1.5;
+            $attackPoint = (int)$attackPoint;
+            $_SESSION['history'] .=$this->getName().'のクリティカルヒット！！<br>';
+        }
         $_SESSION['myhp'] -= $this->attack;
         $_SESSION['history'].= $this->attack.'ポイントのダメージを受けた!<br>';
+        
     }
     //セッター
     public function setHp($num){
@@ -53,6 +60,22 @@ class Monster{
     public function getAttack(){
         return $this->attack;
     }
+}
+
+class MagicMonster extends Monster{
+    private $magicAttack;
+    function __construct($name,$hp,$img,$attack,$magicAttack){
+        parent::__construct($name,$hp,$img,$attack);
+        $this->magicAttack = $magicAttack;
+    }
+    public function getMagicAttack(){
+        return $this->getMagicAttack;
+}
+public function magicAttack(){
+    $_SESSION['history'] .= $this->name.'の魔法攻撃！！<br>';
+    $_SESSION['myhp'] -= $this->magicAttack;
+    $_SESSION['history'] .= $this->magicAttack.'ポイントのダメージを受けた！<br>';
+}
 }
 // インスタンス生成
 $monsters[] = new Monster('フランケン',100,'img/monster01.png',mt_rand(20,40));

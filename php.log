@@ -261,3 +261,31 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 197
+[17-Jul-2020 20:39:06 Asia/Tokyo] PHP Notice:  Undefined index: monster in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 197
+[17-Jul-2020 20:39:06 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to a member function getName() on null in /Applications/MAMP/htdocs/PHP_Obj/index.php:197
+Stack trace:
+#0 {main}
+  thrown in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 197
+[17-Jul-2020 20:39:16 Asia/Tokyo] POSTされた!
+[17-Jul-2020 20:39:20 Asia/Tokyo] POSTされた!
+[17-Jul-2020 20:39:22 Asia/Tokyo] POSTされた!
+[17-Jul-2020 20:39:22 Asia/Tokyo] PHP Notice:  Undefined variable: int in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 102
+[17-Jul-2020 20:39:23 Asia/Tokyo] POSTされた!
+[17-Jul-2020 20:39:23 Asia/Tokyo] PHP Notice:  Undefined variable: int in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 102
+[17-Jul-2020 20:39:25 Asia/Tokyo] POSTされた!
+[17-Jul-2020 20:39:25 Asia/Tokyo] PHP Notice:  Undefined variable: int in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 102
+[17-Jul-2020 20:39:26 Asia/Tokyo] POSTされた!
+[17-Jul-2020 20:39:26 Asia/Tokyo] PHP Notice:  Undefined variable: int in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 102
+[17-Jul-2020 20:39:28 Asia/Tokyo] POSTされた!
+[17-Jul-2020 20:39:28 Asia/Tokyo] PHP Notice:  Undefined variable: int in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 102
+[17-Jul-2020 20:39:29 Asia/Tokyo] POSTされた!
+[17-Jul-2020 20:39:33 Asia/Tokyo] POSTされた!
+[17-Jul-2020 20:39:35 Asia/Tokyo] POSTされた!
+[17-Jul-2020 20:39:35 Asia/Tokyo] PHP Notice:  Undefined variable: int in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 102
+[17-Jul-2020 20:39:36 Asia/Tokyo] POSTされた!
+[17-Jul-2020 20:39:36 Asia/Tokyo] PHP Notice:  Undefined variable: int in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 102
+[17-Jul-2020 20:39:37 Asia/Tokyo] POSTされた!
+[17-Jul-2020 20:39:37 Asia/Tokyo] PHP Notice:  Undefined variable: int in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 102
+[17-Jul-2020 20:39:38 Asia/Tokyo] POSTされた!
+[17-Jul-2020 20:39:38 Asia/Tokyo] PHP Notice:  Undefined variable: int in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 102
+[17-Jul-2020 20:39:40 Asia/Tokyo] POSTされた!
