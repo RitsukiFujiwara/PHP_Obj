@@ -30,10 +30,10 @@ class Monster{
         if(!mt_rand(0,10)){
             $attackPoint *= 1.5;
             $attackPoint = (int)$attackPoint;
-            $_SESSION['history'] .=$this->getName().'のクリティカルヒット！！<br>';
+            History::set($this->getName().'のクリティカルヒット！！');
         }
         $_SESSION['myhp'] -= $this->attack;
-        $_SESSION['history'].= $this->attack.'ポイントのダメージを受けた!<br>';
+        History::set($attackPoint.'ポイントのダメージを受けた!');
         
     }
     //セッター
@@ -69,19 +69,45 @@ class MagicMonster extends Monster{
         $this->magicAttack = $magicAttack;
     }
     public function getMagicAttack(){
-        return $this->getMagicAttack;
+        return $this->magicAttack;
 }
-public function magicAttack(){
-    $_SESSION['history'] .= $this->name.'の魔法攻撃！！<br>';
-    $_SESSION['myhp'] -= $this->magicAttack;
-    $_SESSION['history'] .= $this->magicAttack.'ポイントのダメージを受けた！<br>';
+
+public function attack(){
+    $attackPoint = $this->attack;
+    if(!mt_rand(0,5)){
+        // $_SESSION['history'] .= $this->name.'の魔法攻撃！！<br>';
+        History::set($this->name.'の魔法攻撃！！');
+        $_SESSION['myhp'] -= $this->magicAttack;
+        // $_SESSION['history'] .= $this->magicAttack.'ポイントのダメージを受けた！<br>';
+        History::set($this->magicAttack.'ポイントのダメージを受けた！');
+    }else{
+        parent::attack();
+    }
 }
+
+
+// public function magicAttack(){
+//     $_SESSION['history'] .= $this->name.'の魔法攻撃！！<br>';
+//     $_SESSION['myhp'] -= $this->magicAttack;
+//     $_SESSION['history'] .= $this->magicAttack.'ポイントのダメージを受けた！<br>';
+// }
+}
+
+class History{
+    public static function set($str){
+        if(empty($_SESSION['history'])) $_SESSION['history'] = '';
+
+        $_SESSION['history'] .= $str.'<br>';
+    }
+    public static function clear(){
+        unset($_SESSION['history']);
+    }
 }
 // インスタンス生成
 $monsters[] = new Monster('フランケン',100,'img/monster01.png',mt_rand(20,40));
-$monsters[] = new Monster('フランケンNEO',300,'img/monster02.png',mt_rand(20,60));
+$monsters[] = new Monster('フランケンNEO',300,'img/monster02.png',mt_rand(20,60),mt_rand(50,100));
 $monsters[] = new Monster('ドラキュリー',200,'img/monster03.png',mt_rand(30,50));
-$monsters[] = new Monster('ドラキュラ男爵',400,'img/monster04.png',mt_rand(50,80));
+$monsters[] = new Monster('ドラキュラ男爵',400,'img/monster04.png',mt_rand(50,80),mt_rand(60,120));
 $monsters[] = new Monster('スカルフェイス',150,'img/monster05.png',mt_rand(30,60));
 $monsters[] = new Monster('毒ハンド',100,'img/monster06.png',mt_rand(10,30));
 $monsters[] = new Monster('泥ハンド',120,'img/monster07.png',mt_rand(20,30));
@@ -90,11 +116,14 @@ $monsters[] = new Monster('血のハンド',180,'img/monster08.png',mt_rand(30,5
 function createMonster(){
     global $monsters;
     $monster = $monsters[mt_rand(0,7)];
-    $_SESSION['history'].=$monster->getName().'が現れた!<br>';
+    // $_SESSION['history'].=$monster->getName().'が現れた!<br>';
+    History::set($monster->getName().'が現れた！');
     $_SESSION['monster'] = $monster;
 }
 function init(){
-    $_SESSION['history'] .='初期化します!<br>';
+    // $_SESSION['history'] .='初期化します!<br>';
+    History::clear();
+    History::set('初期化します！');
     $_SESSION['knockDownCount'] = 0;
     $_SESSION['myhp'] = MY_HP;
     createMonster(); 
@@ -110,36 +139,49 @@ if(!empty($_POST)){
     error_log('POSTされた!');
 
     if($startFlg){
-        $_SESSION['history'] ='ゲームスタート!<br>';
+        History::set('ゲームスタート!');
         init();
     }else{
         // 攻撃するを押した場合
         if($attackFlg){
-            $_SESSION['history'] .='攻撃した!<br>';
+            History::set('攻撃した!');
 
             // ランダムでモンスターに攻撃を与える
             $attackPoint = mt_rand(50,100);
             $_SESSION['monster']->setHp($_SESSION['monster']->getHp() - $attackPoint );
-            $_SESSION['history'].=$attackPoint.'ポイントのダメージを与えた!<br>';
+            // $_SESSION['history'].=$attackPoint.'ポイントのダメージを与えた!<br>';
+            History::set('ポイントのダメージを与えた!');
             // モンスターから攻撃を受ける
-            if(!mt_rand(0,9) == $int){
-                $_SESSION['monster']->setAttack($_SESSION['monster']->getAttack()*1.5);
-                $_SESSION['history'] .= $_SESSION['monster']->getName().'のクリティカルヒット!!<br>';
+            // $_SESSION['monster']->attack();
+            if($_SESSION['monster'] instanceof MagicMonster){
+                if(!mt_rand(0,4)){
+                    $_SESSION['monster']->magicAttack();
+                }else{
+                    $_SESSION['monster']->attack();
+                }
+            }else{
+                $_SESSION['monster']->attack();
+
             }
-            $_SESSION['monster']->attack();
+            // if(!mt_rand(0,9) == $int){
+            //     $_SESSION['monster']->setAttack($_SESSION['monster']->getAttack()*1.5);
+            //     $_SESSION['history'] .= $_SESSION['monster']->getName().'のクリティカルヒット!!<br>';
+            
               // 自分のhpが0以下になったらゲームオーバー	
             if($_SESSION['myhp'] <= 0){	
                 gameOver();	
             }else{
             // 自分のhpが0以下になったら、別のモンスターを出現させる
             if($_SESSION['monster']->getHp() <=0){
-                $_SESSION['history'].=$_SESSION['monster']->GetName().'を倒した!<br>';
+                // $_SESSION['history'].=$_SESSION['monster']->GetName().'を倒した!<br>';
+                History::set($_SESSION['monster']->getName().'を倒した！');
                 createMonster();
                 $_SESSION['knockDownCount'] = $_SESSION['knockDownCount']+1;
             }
         }
     }else{
-        $_SESSION['history'].='逃げた!<br>';
+        // $_SESSION['history'].='逃げた!<br>';
+        History::set('逃げた！');
         createMonster();
     }
 }
