@@ -296,3 +296,120 @@ Stack trace:
 [19-Jul-2020 00:24:15 Asia/Tokyo] POSTされた!
 [19-Jul-2020 00:24:17 Asia/Tokyo] POSTされた!
 [19-Jul-2020 00:24:21 Asia/Tokyo] POSTされた!
+[19-Jul-2020 10:00:43 Asia/Tokyo] POSTされた！
+[19-Jul-2020 10:00:43 Asia/Tokyo] PHP Notice:  Undefined index: human in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 198
+[19-Jul-2020 10:00:43 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to a member function attack() on null in /Applications/MAMP/htdocs/PHP_Obj/index.php:198
+Stack trace:
+#0 {main}
+  thrown in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 198
+[19-Jul-2020 10:01:12 Asia/Tokyo] POSTされた！
+[19-Jul-2020 10:01:12 Asia/Tokyo] PHP Notice:  Undefined index: human in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 198
+[19-Jul-2020 10:01:12 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to a member function attack() on null in /Applications/MAMP/htdocs/PHP_Obj/index.php:198
+Stack trace:
+#0 {main}
+  thrown in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 198
+[19-Jul-2020 10:01:13 Asia/Tokyo] PHP Notice:  Undefined index: human in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 301
+[19-Jul-2020 10:01:13 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to a member function getHp() on null in /Applications/MAMP/htdocs/PHP_Obj/index.php:301
+Stack trace:
+#0 {main}
+  thrown in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 301
+[19-Jul-2020 10:01:36 Asia/Tokyo] PHP Notice:  Undefined index: monster in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 295
+[19-Jul-2020 10:01:36 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to a member function getName() on null in /Applications/MAMP/htdocs/PHP_Obj/index.php:295
+Stack trace:
+#0 {main}
+  thrown in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 295
+[19-Jul-2020 10:01:46 Asia/Tokyo] PHP Notice:  Undefined index: human in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 301
+[19-Jul-2020 10:01:46 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to a member function getHp() on null in /Applications/MAMP/htdocs/PHP_Obj/index.php:301
+Stack trace:
+#0 {main}
+  thrown in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 301
+[19-Jul-2020 10:01:58 Asia/Tokyo] PHP Notice:  Undefined index: human in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 301
+[19-Jul-2020 10:01:58 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to a member function getHp() on null in /Applications/MAMP/htdocs/PHP_Obj/index.php:301
+Stack trace:
+#0 {main}
+  thrown in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 301
+[19-Jul-2020 10:02:35 Asia/Tokyo] PHP Notice:  Undefined index: human in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 301
+[19-Jul-2020 10:02:35 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to a member function getHp() on null in /Applications/MAMP/htdocs/PHP_Obj/index.php:301
+Stack trace:
+#0 {main}
+  thrown in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 301
+[19-Jul-2020 10:28:50 Asia/Tokyo] PHP Notice:  Undefined index: human in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 344
+[19-Jul-2020 10:28:50 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to a member function getHp() on null in /Applications/MAMP/htdocs/PHP_Obj/index.php:344
+Stack trace:
+#0 {main}
+  thrown in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 344
+[19-Jul-2020 10:29:01 Asia/Tokyo] PHP Notice:  Undefined index: human in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 344
+[19-Jul-2020 10:29:01 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to a member function getHp() on null in /Applications/MAMP/htdocs/PHP_Obj/index.php:344
+Stack trace:
+#0 {main}
+  thrown in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 344
+[19-Jul-2020 10:29:22 Asia/Tokyo] PHP Notice:  Undefined index: human in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 344
+[19-Jul-2020 10:29:22 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to a member function getHp() on null in /Applications/MAMP/htdocs/PHP_Obj/index.php:344
+Stack trace:
+#0 {main}
+  thrown in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 344
+[19-Jul-2020 10:29:45 Asia/Tokyo] PHP Notice:  Undefined index: monster in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 338
+[19-Jul-2020 10:29:45 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to a member function getName() on null in /Applications/MAMP/htdocs/PHP_Obj/index.php:338
+Stack trace:
+#0 {main}
+  thrown in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 338
+[19-Jul-2020 10:29:50 Asia/Tokyo] PHP Notice:  Undefined index: monster in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 338
+[19-Jul-2020 10:29:50 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to a member function getName() on null in /Applications/MAMP/htdocs/PHP_Obj/index.php:338
+Stack trace:
+#0 {main}
+  thrown in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 338
+[19-Jul-2020 10:33:39 Asia/Tokyo] PHP Notice:  Undefined index: human in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 344
+[19-Jul-2020 10:33:39 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to a member function getHp() on null in /Applications/MAMP/htdocs/PHP_Obj/index.php:344
+Stack trace:
+#0 {main}
+  thrown in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 344
+[19-Jul-2020 10:33:40 Asia/Tokyo] PHP Notice:  Undefined index: human in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 344
+[19-Jul-2020 10:33:40 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to a member function getHp() on null in /Applications/MAMP/htdocs/PHP_Obj/index.php:344
+Stack trace:
+#0 {main}
+  thrown in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 344
+[19-Jul-2020 10:42:42 Asia/Tokyo] PHP Notice:  Undefined index: human in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 344
+[19-Jul-2020 10:42:42 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to a member function getHp() on null in /Applications/MAMP/htdocs/PHP_Obj/index.php:344
+Stack trace:
+#0 {main}
+  thrown in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 344
+[19-Jul-2020 10:43:39 Asia/Tokyo] PHP Notice:  Undefined index: human in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 344
+[19-Jul-2020 10:43:39 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to a member function getHp() on null in /Applications/MAMP/htdocs/PHP_Obj/index.php:344
+Stack trace:
+#0 {main}
+  thrown in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 344
+[19-Jul-2020 10:45:07 Asia/Tokyo] PHP Notice:  Undefined index: human in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 344
+[19-Jul-2020 10:45:07 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to a member function getHp() on null in /Applications/MAMP/htdocs/PHP_Obj/index.php:344
+Stack trace:
+#0 {main}
+  thrown in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 344
+[19-Jul-2020 10:45:28 Asia/Tokyo] PHP Notice:  Undefined index: human in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 344
+[19-Jul-2020 10:45:28 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to a member function getHp() on null in /Applications/MAMP/htdocs/PHP_Obj/index.php:344
+Stack trace:
+#0 {main}
+  thrown in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 344
+[19-Jul-2020 10:47:16 Asia/Tokyo] PHP Notice:  Undefined index: human in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 344
+[19-Jul-2020 10:47:16 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to a member function getHp() on null in /Applications/MAMP/htdocs/PHP_Obj/index.php:344
+Stack trace:
+#0 {main}
+  thrown in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 344
+[19-Jul-2020 10:51:13 Asia/Tokyo] PHP Notice:  Undefined index: human in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 345
+[19-Jul-2020 10:51:13 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to a member function getHp() on null in /Applications/MAMP/htdocs/PHP_Obj/index.php:345
+Stack trace:
+#0 {main}
+  thrown in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 345
+[19-Jul-2020 11:28:14 Asia/Tokyo] PHP Fatal error:  Cannot make non static method HistoryInterface::set() static in class History in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 123
+[19-Jul-2020 11:28:31 Asia/Tokyo] PHP Fatal error:  Cannot make non static method HistoryInterface::set() static in class History in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 123
+[19-Jul-2020 11:29:51 Asia/Tokyo] PHP Fatal error:  Cannot make non static method HistoryInterface::set() static in class History in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 123
+[19-Jul-2020 11:40:40 Asia/Tokyo] PHP Fatal error:  Cannot make non static method HistoryInterface::set() static in class History in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 124
+[19-Jul-2020 11:42:37 Asia/Tokyo] PHP Notice:  Undefined index: monster in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 280
+[19-Jul-2020 11:42:37 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to a member function getName() on null in /Applications/MAMP/htdocs/PHP_Obj/index.php:280
+Stack trace:
+#0 {main}
+  thrown in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 280
+[19-Jul-2020 11:42:50 Asia/Tokyo] POSTされた！
+[19-Jul-2020 11:42:59 Asia/Tokyo] POSTされた！
+[19-Jul-2020 11:43:02 Asia/Tokyo] POSTされた！
+[19-Jul-2020 11:43:08 Asia/Tokyo] POSTされた！
+[19-Jul-2020 11:43:12 Asia/Tokyo] POSTされた！
+[19-Jul-2020 11:43:15 Asia/Tokyo] POSTされた！
