@@ -429,3 +429,8 @@ Stack trace:
 [19-Jul-2020 12:40:24 Asia/Tokyo] POSTされた！
 [19-Jul-2020 12:40:25 Asia/Tokyo] POSTされた！
 [19-Jul-2020 12:51:39 Asia/Tokyo] POSTされた！
+[05-Aug-2020 08:01:28 Asia/Tokyo] PHP Notice:  Undefined index: monster in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 280
+[05-Aug-2020 08:01:28 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to a member function getName() on null in /Applications/MAMP/htdocs/PHP_Obj/index.php:280
+Stack trace:
+#0 {main}
+  thrown in /Applications/MAMP/htdocs/PHP_Obj/index.php on line 280
